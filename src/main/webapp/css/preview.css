@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+/* Base Layout */
+body {
+    margin: 0;
+    padding: 40px;
+    background: #f0f0f0;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* A4 Resume Container */
+.resume-container {
+    width: 210mm;
+    height: 297mm;
+    background-color: white;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    page-break-after: always;
+}
+
+/* Left Section */
+.left-panel {
+    width: 35%;
+    background-color: #111;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Right Section */
+.right-panel {
+    width: 65%;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    word-wrap: break-word;
+}
+
+/* Headings */
+h2, h3 {
+    margin-top: 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+/* List Styling */
+ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* Print Button Styling */
+.print-button-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.print-button-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.print-button-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Print Mode */
+@media print {
+    body {
+        background: none;
+        padding: 0;
+    }
+
+    .resume-container {
+        margin: 0;
+        box-shadow: none;
+        page-break-after: always;
+    }
+
+    .print-button-container {
+        display: none;
+    }
+
+    @page {
+        size: A4;
+        margin: 0;
+    }
+}
