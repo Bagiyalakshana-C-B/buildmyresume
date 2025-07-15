@@ -101,3 +101,34 @@ li {
         margin: 0;
     }
 }
+/* Action Bar Styling */
+.action-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.logout-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #dc3545;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #a71d2a;
+}
+
+@media print {
+    .action-bar {
+        display: none;
+    }
+}
+
