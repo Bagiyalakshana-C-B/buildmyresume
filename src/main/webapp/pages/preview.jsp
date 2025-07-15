@@ -11,6 +11,7 @@
 <!-- Optional: Print Button -->
 <div class="print-button-container">
     <button onclick="window.print()">Print / Save as PDF</button>
+    <a href="/login" class="logout-button">Logout</a>
 </div>
 
 <!-- Resume Container (A4 size) -->
